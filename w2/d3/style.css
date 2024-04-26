@@ -29,13 +29,13 @@
 .col,
 .col-2,
 .col-6 {
-	border: 1px solid green;
+	/* border: 1px solid green; */
 }
 
 .row {
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 }
 
 .container {
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }

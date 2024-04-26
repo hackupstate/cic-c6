@@ -1,0 +1,39 @@
+#topNav {
+	background-color: darkblue;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#linksNav span {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#linksNav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid gray;
+}
+
+#activeLink,
+#linksNav span:hover {
+	font-weight: bold;
+	border-bottom: 5px solid orange;
+	padding-bottom: 8px;
+	cursor: pointer;
+}
+
+#breakingCol {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	min-height: calc(100vh - 99px);
+}
+
+#breakingCol p {
+	margin-bottom: 5px;
+}
+
+.author {
+	color: gray;
+}
