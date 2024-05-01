@@ -1,0 +1,124 @@
+body {
+	background: black;
+	color: white;
+}
+
+/* .col-1 {
+	border: 1px solid pink;
+}
+
+.col,
+.col-3 {
+	border: 1px solid orange;
+} */
+
+#nav {
+	padding: 5px;
+}
+
+#linksBar span {
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 13px;
+}
+
+#linksBar span:hover {
+	color: gray;
+	cursor: pointer;
+}
+
+#icons span {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+#hero {
+	background-image: url("img/cover.jpg");
+	min-height: 550px;
+	background-size: cover;
+}
+
+#seriesRow {
+	margin-top: 150px;
+	color: darkgray;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+#seriesRow img {
+	height: 25px;
+}
+
+#showName {
+	font-size: 56px;
+	/* text-transform: uppercase; */
+	text-shadow: 2px 2px black;
+	font-family: "Sevillana", cursive;
+}
+
+#trendingStatus img {
+	width: 25px;
+	margin-right: 10px;
+}
+
+#trendingStatus {
+	text-shadow: 1px 1px black;
+	font-weight: bold;
+}
+
+#play {
+	background: white;
+	color: black;
+	border: none;
+	font-weight: 500;
+	padding: 5px 20px 5px 20px;
+	border-radius: 5px;
+}
+
+#moreInfo {
+	background: gray;
+	color: white;
+	padding: 5px 20px 5px 20px;
+	border-radius: 5px;
+	border: none;
+}
+/* .col-5 {
+	border: 5px solid pink;
+} */
+
+#rating {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 5px 20px 5px 20px;
+	border-left: 2px solid white;
+}
+
+#ratingCol {
+	margin-top: 250px;
+}
+
+#ratingCol .material-symbols-outlined {
+	color: gray;
+	border: 2px solid gray;
+	border-radius: 100px;
+	padding: 5px;
+	margin-right: 15px;
+}
+
+#screenSize {
+	display: none;
+}
+
+@media only screen and (max-width: 650px), (min-width: 1400px) {
+	#screenSize {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+	}
+
+	.container-fluid {
+		display: none;
+	}
+}
