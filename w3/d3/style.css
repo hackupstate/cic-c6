@@ -1,0 +1,104 @@
+:root {
+	--pink: #eec4c2;
+}
+
+.container {
+	margin-top: 25px;
+}
+
+header {
+	background-color: #857ea7;
+	border-radius: 10px 10px 0 0;
+	padding-top: 20px;
+	color: white;
+	padding-bottom: 15px;
+}
+
+nav {
+	background-color: #eec4c2;
+	color: black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+nav span {
+	color: white;
+}
+
+main {
+	background-color: white;
+}
+
+body {
+	background-image: url("img/windows.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#search button {
+	border-width: 1px;
+}
+
+.link:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#editLinks span {
+	color: #eec4c2;
+}
+
+main {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+main h3 {
+	font-weight: bold;
+}
+
+#profileImage img {
+	width: 50%;
+}
+
+#profile,
+#friendSpace {
+	h5 {
+		font-weight: bold;
+		border-bottom: 2px solid black;
+		margin-top: 25px;
+	}
+}
+
+#contactLinks {
+	color: #eec4c2;
+}
+
+#editProfile {
+	color: var(--pink);
+	border: 5px solid black;
+	font-weight: bold;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#friendSpace .col-3 {
+	color: gray;
+}
+
+#friendSpace img {
+	border-radius: 1000px;
+}
+
+#profile {
+	background-image: url("img/spongebob.jpg");
+	background-size: contain;
+	color: white;
+}
+
+audio {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
