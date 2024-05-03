@@ -1,0 +1,31 @@
+body {
+	background-color: #01161e;
+	font-family: "Open Sans", sans-serif;
+}
+
+#intro {
+	color: white;
+	height: 100vh;
+	/* border: 1px solid white; */
+}
+
+#intro h1 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 96px;
+}
+
+#intro h3 {
+	margin-top: 20px;
+}
+
+#intro code {
+	margin-top: 20px;
+	font-size: 30px;
+}
+
+#arrowDown {
+	font-size: 75px;
+	position: absolute;
+	bottom: 30px;
+	left: calc(50% - 37.5px);
+}
