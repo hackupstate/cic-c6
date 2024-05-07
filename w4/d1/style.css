@@ -1,0 +1,119 @@
+/*https://coolors.co/01161e-124559-598392-d5e4f5-dac4f7*/
+
+body {
+	background-color: #01161e;
+	font-family: "Open Sans", sans-serif;
+}
+
+#intro {
+	color: white;
+	height: 100vh;
+	/* border: 1px solid white; */
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+#intro h1 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 96px;
+	animation: fadein ease-in 1s;
+}
+
+#intro h3 {
+	animation-delay: 1s;
+	animation-name: fadein;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+#intro code {
+	margin-top: 20px;
+	font-size: 30px;
+	text-align: center;
+	animation-name: fadein;
+	animation-delay: 3s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+	#intro h1 {
+		font-size: 48px;
+	}
+
+	#intro code {
+		font-size: 16px;
+	}
+}
+
+#intro h3 {
+	margin-top: 20px;
+}
+
+#arrowDown {
+	font-size: 75px;
+	position: absolute;
+	bottom: 30px;
+	left: calc(50% - 37.5px);
+}
+
+#about {
+	color: white;
+	background: #124559;
+	padding: 30px;
+
+	p {
+		font-size: 20px;
+	}
+}
+
+#contact {
+	background: #598392;
+	color: white;
+	padding: 30px;
+
+	.row {
+		margin-bottom: 15px;
+	}
+
+	a {
+		color: white;
+	}
+
+	input,
+	textarea {
+		padding: 10px;
+		width: 100%;
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
+
+#portfolio {
+	padding: 30px;
+	background: #d5e4f5;
+}
+
+footer {
+	padding: 30px;
+	background: black;
+	color: white;
+}
+
+#about,
+#contact,
+#portfolio,
+footer {
+	box-shadow: -10px 0px 25px #01161e;
+}
