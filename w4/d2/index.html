@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Max Matthews Portfolio</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+		/>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<section
+				id="intro"
+				class="d-flex flex-column justify-content-center align-items-center text-center"
+			>
+				<h1>Max Matthews</h1>
+				<h3>Somewhat good teacher</h3>
+				<code>HTML rulez, JS droolz.</code>
+				<a href="#about">
+					<span class="material-symbols-outlined" id="arrowDown">
+						keyboard_arrow_down
+					</span>
+				</a>
+			</section>
+			<section id="about">
+				<h1>About</h1>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+					Dolores rerum laudantium dicta? Porro amet a distinctio,
+					architecto reiciendis atque, aliquid, magni saepe ipsa dolor
+					quibusdam vel. Officia veritatis neque dolorem.
+				</p>
+				<!-- end of about section -->
+			</section>
+			<section id="contact">
+				<h1>Contact</h1>
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						Want to get in touch? Shoot me an
+						<a href="mailto:maxm@hackupstate.com">email</a> or fill
+						out the form.
+						<!-- end of left col of contact section -->
+					</div>
+					<form class="col-md-6 col-xs-12">
+						<div class="row">
+							<div class="col-6">
+								<input type="text" placeholder="First Name" />
+								<!-- end of col for first name -->
+							</div>
+							<div class="col-6">
+								<input type="text" placeholder="Last Name" />
+								<!-- end of col for last name -->
+							</div>
+							<!-- end of first row of form -->
+						</div>
+						<div class="row">
+							<div class="col">
+								<input type="email" placeholder="Email" />
+							</div>
+							<!-- end of row for email -->
+						</div>
+						<div class="row">
+							<div class="col">
+								<textarea
+									placeholder="Drop me a note"
+								></textarea>
+							</div>
+							<!-- end of row -->
+						</div>
+						<div>
+							<button type="submit" class="btn btn-primary">
+								Send 📬
+							</button>
+						</div>
+						<!-- end of right col of contact section (form) -->
+					</form>
+					<!-- end of row for contact section -->
+				</div>
+			</section>
+			<section id="portfolio">
+				<h1>Portfolio</h1>
+				<p>
+					To view more details about the projects, click on any of the
+					cards.
+				</p>
+				<div class="row">
+					<div class="col-sm-4 col-xs-6">
+						<div class="card">
+							<img
+								src="img/weatherApp.png"
+								class="card-img-top"
+								alt="screenshot of weather app"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Weather App</h5>
+								<p class="card-text">
+									First front end project modeled after a
+									weather website.
+								</p>
+								<a href="weather.html" class="btn btn-primary"
+									>Make it rain</a
+								>
+							</div>
+						</div>
+						<!-- end of proj #1 col -->
+					</div>
+					<div class="col-sm-4 col-xs-6">
+						<div class="card">
+							<img
+								src="img/feedbackForm.png"
+								class="card-img-top"
+								alt="screenshot of form"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Feedback form</h5>
+								<p class="card-text">
+									Form modeled after Google Forms.
+								</p>
+								<a href="#" class="btn btn-primary"
+									>Provide Feedback</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-xs-6">
+						<div class="card">
+							<img
+								src="img/maxflix.png"
+								class="card-img-top"
+								alt="screenshot of maxflix website"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Maxflix</h5>
+								<p class="card-text">
+									Recreation of a streaming service's
+									homepage.
+								</p>
+								<a href="#" class="btn btn-primary"
+									>Get Streaming</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>© 2024 Hack Upstate LLC</footer>
+			<!-- end of main site container -->
+		</div>
+	</body>
+</html>
