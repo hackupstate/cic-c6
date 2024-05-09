@@ -1,0 +1,47 @@
+.product {
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: 15px;
+
+	button {
+		width: 100%;
+	}
+
+	img {
+		border-radius: 10px;
+	}
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.cartItem {
+	border: 1px solid gray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 5px;
+
+	img {
+		border-radius: 10px;
+	}
+
+	.quantityNumber {
+		font-size: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-weight: bold;
+	}
+
+	.price {
+		font-size: 20px;
+		font-weight: bold;
+	}
+}
+
+nav {
+	a {
+		color: black;
+	}
+}
