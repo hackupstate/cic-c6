@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ToDo</title>
+	</head>
+	<body>
+		<h1>To Do List App</h1>
+		<!-- #1 Create text input for user to type into -->
+		<!-- #8 User clicks inside input and adds some text, which fires onkeydownevent -->
+		<input
+			type="text"
+			placeholder="Task description"
+			id="inputtedText"
+			onkeydown="keyPressed(event)"
+		/>
+		<!-- #2 Create button that the user can click on to add the item to the list -->
+		<!-- #11 User clicks on the add button -->
+		<button onclick="addItem(event)">Add</button>
+
+		<!-- #3 Creates empty ul as a placeholder that we can add the list items to in the future -->
+		<ul id="listItems">
+			<!-- Add your first item to the list by using the textbox above -->
+		</ul>
+		<!-- #4 Execute script.js -->
+		<script src="script.js"></script>
+	</body>
+</html>

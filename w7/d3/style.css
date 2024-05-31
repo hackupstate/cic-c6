@@ -1,0 +1,30 @@
+h1 {
+	text-align: center;
+}
+
+.container {
+	border: 3px solid green;
+	width: 160px;
+	margin: 0 auto;
+}
+
+#screen {
+	background: green;
+	color: white;
+	text-align: right;
+	padding: 10px;
+	font-family: "Courier New", Courier, monospace;
+	margin-bottom: 15px;
+}
+
+button {
+	width: 30px;
+	padding: 5px;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-bottom: 10px;
+}
+
+.border {
+	border: 3px solid red;
+}
