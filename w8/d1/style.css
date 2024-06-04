@@ -1,0 +1,15 @@
+body {
+	text-align: center;
+}
+
+#seats > div > span:nth-child(3),
+#seats > div > span:nth-child(7) {
+	margin-left: 25px;
+}
+
+#screen {
+	border: 1px solid black;
+	width: 200px;
+	margin: 0 auto;
+	padding: 30px;
+}
