@@ -8,19 +8,77 @@ const movies = {
 	"The Godfather": {
 		price: 8,
 		seats: [],
+		rows: 2,
 	},
 	"Citizen Kane": {
 		price: 9,
 		seats: [],
+		row: 10,
 	},
 	"Planet of the Apes": {
 		price: 10,
 		seats: [],
+		rows: 15,
 	},
 	Rugrats: {
 		price: 11,
 		seats: [],
+		rows: 20,
 	},
+};
+
+let numSelected = 0;
+
+// #37 This function not only gets called when we select a movie from the dropdown, it also gets called
+//when we click on a seat.
+const updateHTML = (movieData) => {
+	// #20 Start an empty string that we can eventually add HTML to
+	let seatsHTML = "";
+
+	// #21 Using Object.entries, get access to the rows of seats from #19 and also the index so
+	//we can keep track of what row num we are on
+	for (let [rowIndex, row] of Object.entries(movieData.seats)) {
+		// #22 Add the opening div tag for our row to the string
+		seatsHTML += "<div>";
+		// #23 Loop over all the cols in the row from #21
+		for (let [colIndex, col] of Object.entries(row)) {
+			console.log(`Row: ${rowIndex} & Col: ${colIndex}`);
+
+			// #24 Generate a shitload of HTML using a template literal. This not only generates
+			//the span tag with the chair as the contents, it also looks at the col we are looping over
+			//to see if it is occupied using ternary operator. If it is, we add the class named "occpied".
+			//We also use the row & col index that our favorite Object.entries method gives us access to from
+			//#21 & 23 to include as HTML attributes so when the chair is clicked on, we can use that data to
+			//know each one. Finally we add an onclick event, so when the chair is clicked on, we can fire an
+			//event listener.
+			// #38 Now, based off the seat object we add a class of selected which makes the seat display blue.
+			seatsHTML += `<span 
+			class="material-symbols-outlined ${col.occupied ? "occupied" : ""} ${
+				col.selected ? "selected" : ""
+			}" 
+			data-rowIndex="${rowIndex}"
+			data-colIndex="${colIndex}"
+			onclick="seatClicked(event)"
+			> chair </span>`;
+		}
+		// #25 After we are done generating these 8 seats, add the closing div tag to match #22
+		seatsHTML += "</div>";
+	}
+
+	//#26 We are done generating all the seats, so add in the screen
+	seatsHTML += `<div id="screen">Screen</div>`;
+
+	//#27 Take all the HTML that we have generated as a string and set it into the seats div.
+	//This is the step that JS stops treating our HTML as a string, and actually makes the browser show it.
+	document.getElementById("seats").innerHTML = seatsHTML;
+
+	// #39 Based off of the number of selected seats generate a string that shows the number of selected seats
+	//and the singular vs plurar
+	let selectedText = `You have <span class="bold">${numSelected}</span> seat${
+		numSelected === 1 ? "" : "s"
+	} selected.`;
+	// #40 Use the text frmo #39 to make it show up in the HTML
+	document.getElementById("selectionStatus").innerHTML = selectedText;
 };
 
 //#3 Get the movieSelection <select> from the HTML using the DOM
@@ -75,42 +133,7 @@ movieDropdown.onchange = (event) => {
 	const movieData = movies[selectedMovie];
 	console.log(movieData.seats);
 
-	// #20 Start an empty string that we can eventually add HTML to
-	let seatsHTML = "";
-
-	// #21 Using Object.entries, get access to the rows of seats from #19 and also the index so
-	//we can keep track of what row num we are on
-	for (let [rowIndex, row] of Object.entries(movieData.seats)) {
-		// #22 Add the opening div tag for our row to the string
-		seatsHTML += "<div>";
-		// #23 Loop over all the cols in the row from #21
-		for (let [colIndex, col] of Object.entries(row)) {
-			console.log(`Row: ${rowIndex} & Col: ${colIndex}`);
-
-			// #24 Generate a shitload of HTML using a template literal. This not only generates
-			//the span tag with the chair as the contents, it also looks at the col we are looping over
-			//to see if it is occupied using ternary operator. If it is, we add the class named "occpied".
-			//We also use the row & col index that our favorite Object.entries method gives us access to from
-			//#21 & 23 to include as HTML attributes so when the chair is clicked on, we can use that data to
-			//know each one. Finally we add an onclick event, so when the chair is clicked on, we can fire an
-			//event listener.
-			seatsHTML += `<span 
-			class="material-symbols-outlined ${col.occupied ? "occupied" : ""}" 
-			data-rowIndex="${rowIndex}"
-			data-colIndex="${colIndex}"
-			onclick="seatClicked(event)"
-			> chair </span>`;
-		}
-		// #25 After we are done generating these 8 seats, add the closing div tag to match #22
-		seatsHTML += "</div>";
-	}
-
-	//#26 We are done generating all the seats, so add in the screen
-	seatsHTML += `<div id="screen">Screen</div>`;
-
-	//#27 Take all the HTML that we have generated as a string and set it into the seats div.
-	//This is the step that JS stops treating our HTML as a string, and actually makes the browser show it.
-	document.getElementById("seats").innerHTML = seatsHTML;
+	updateHTML(movieData);
 };
 
 // #11 Loop over all of the values from the movies obj from #2
@@ -118,7 +141,7 @@ for (const movieData of Object.values(movies)) {
 	//start of for loop for each movie
 	// console.log(movieData);
 	// #12 For each movie, start a loop, that will run 8 times
-	for (let rowIterator = 0; rowIterator < 8; rowIterator++) {
+	for (let rowIterator = 0; rowIterator < movieData.rows; rowIterator++) {
 		//start of for loop for each row
 		// #13 Create an empty array so we have a place to store each col of seats
 		let row = [];
@@ -164,5 +187,25 @@ const seatClicked = (event) => {
 	// #31 Use the data from #29 & #30 to access our main object from #2 to get out the
 	//specific seat we care about.
 	const seat = movies[selectedMovie].seats[rowIndex][colIndex];
-	console.log(seat);
+
+	// #32 Check to see if the seat data from #31 has an occupied key with a value of true
+	if (seat.occupied) {
+		//#33 If it does, alert the user they can't take this seat and ignore the rest of the if statement
+		alert("Already taken (jackass)");
+	} else if (seat.selected) {
+		// #34 If the seat isn't occupied, check to see if it's already selected
+		// #35 If it is, set selected to false, subtract one from the counter selected seats, and update the HTML
+		seat.selected = false;
+		numSelected = numSelected - 1;
+		updateHTML(movies[selectedMovie]);
+	} else {
+		// #36 The seat isn't selected OR occupied, so we must assume they are trying to select the seat
+		//Set it equal to selected, log out the seat so we can confirm the data change, update the counter, then update
+		//the HTML based off the selected movie that gets sent in as an argument to the function's parameter
+		seat.selected = true;
+		console.log(seat);
+		numSelected++;
+
+		updateHTML(movies[selectedMovie]);
+	}
 };
