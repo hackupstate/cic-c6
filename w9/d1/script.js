@@ -1,17 +1,26 @@
 console.log("JS Linked on homepage");
 
 // #18 Go to localStorage and get the item out with a key of posts.
-const postAsString = window.localStorage.getItem("post");
+const postsAsString = window.localStorage.getItem("posts");
 // #19 Localstorage returns out value as a stirng, so we need to parse (convert the string back to an object)
 //using JSON.
-const post = JSON.parse(postAsString);
+let posts = JSON.parse(postsAsString);
 // #20 Test to make sure we can access keys in the object, because if it were a string, we wouldn't be able to.
-console.log(post.title);
+console.log(posts);
 
-// #21 Create a large template literal that represents the HTML for a single post and drop in
-//the parsed data from the object that came from localstorage (#18 & #19). The keys of this data
-//line up with the object we created in #13.
-let generatedHTML = `
+let generatedHTML = "";
+
+if (!postsAsString) {
+	generatedHTML = "No posts exist yet";
+} else {
+	posts = posts.sort((a, b) => {
+		return b.timestamp - a.timestamp;
+	});
+	// #21 Create a large template literal that represents the HTML for a single post and drop in
+	//the parsed data from the object that came from localstorage (#18 & #19). The keys of this data
+	//line up with the object we created in #13.
+	for (let post of posts) {
+		generatedHTML += `
 <div class="col-4">
 	<div class="card">
 		<!-- <img src="..." class="card-img-top" alt="..." /> -->
@@ -29,6 +38,8 @@ let generatedHTML = `
 	</div>
 	<!-- end of the col -->
 </div>`;
+	}
+}
 
 //alternative to using a template litertal which we did above using string concatentation
 // let generatedHTML =
