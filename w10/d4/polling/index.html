@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			input {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<!-- #1 Start interface with textbox for question -->
+			<input
+				id="question"
+				type="text"
+				placeholder="Enter question here"
+			/>
+			<!-- #2 Placeholder to show the answers once they are generated -->
+			<form id="pollAnswers"></form>
+			<!-- #3 Buttons to interact with for adding answers -->
+			<!-- #6 User clicks on add poll button -->
+			<button onclick="addPollAnswer(event)">Add poll answer</button>
+			<button onclick="startQuiz(event)">Start Quiz</button>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
