@@ -37,6 +37,12 @@ const answerUpdated = (event) => {
 	pollAnswers[index].text = event.target.value;
 };
 
+const empty = () => {
+	pollAnswers = [];
+	document.getElementById("question").value = "";
+	generateHTML();
+};
+
 // #17 Wait for the start quiz button to be pressed
 // #27 Rerun this function based off calling it in #26
 const startQuiz = () => {
@@ -45,6 +51,12 @@ const startQuiz = () => {
 
 	//#19 Grab the question element
 	const questionElement = document.getElementById("question");
+
+	for (let answer of pollAnswers) {
+		if (!answer.text) {
+			return alert("Empty answer, can't start poll");
+		}
+	}
 
 	//#20 Make a h5 that has a value of either the element's value (if it was a input box) or the innerHTML
 	//if it was already turned into an h5
@@ -77,3 +89,9 @@ const vote = (event) => {
 	// #26 Re-run start quiz to update the HTML based off the array we updated in the line above
 	startQuiz();
 };
+
+let count = 20;
+while (count < 10) {
+	console.log(count);
+	count++;
+}
