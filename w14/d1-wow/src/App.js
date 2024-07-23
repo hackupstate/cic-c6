@@ -13,17 +13,20 @@ function App() {
 	//#7 makeAPICall function is running in background (because it's async) from #5
 	//#12 Function has not been called, so ignore this
 	const makeAPICall = async () => {
+		// #18 Check to see IF is already a movie loaded in
 		if (movieData) {
+			//#19 There is (from the useEffect when the page first loaded, so set the movie data)
+			//to null (empty)
 			setMovieData(null);
 		}
-		// #8 Fetch the data
+		// #8,21 Fetch the data
 		const res = await fetch(
 			`https://owen-wilson-wow-api.onrender.com/wows/random`
 		);
-		// #9 Parse the JSON
+		// #9,22 Parse the JSON
 		const data = await res.json();
 
-		//#10 Extract the data from the array from #9 AND set it into state from #3.
+		//#10, 23 Extract the data from the array from #9 AND set it into state from #3.
 		//Setting state triggers re-render
 		setMovieData(data[0]);
 
@@ -41,11 +44,13 @@ function App() {
 	// #6 Because makeAPICall is async and running in the background, it hasn't
 	//set the state yet, so return a loading message in an h1.
 	//#14 Ignore this loading message because there *IS* now movie data
+	// #20 From #19 we emptied the movie data so show the loading message
 	if (!movieData) {
 		return <h1>Loading...</h1>;
 	}
 
-	//#15 Return this div instead
+	//#15 Return this div instead.
+	// #24 The movie data  has now been loaded from the button press on #17 so show the NEW movie data
 	return (
 		<div className="App">
 			{/* #16 Access the movie title from state and display it in an h1, and img, and in a video */}
@@ -55,7 +60,7 @@ function App() {
 				<source src={movieData.video["1080p"]} type="video/mp4" />
 			</video>
 			<br />
-
+			{/* #17 MakeAPICall is triggered by clicking on the button.  */}
 			<button onClick={makeAPICall}>Wow Me!</button>
 		</div>
 	);
