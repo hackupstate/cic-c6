@@ -1,0 +1,41 @@
+#weatherIcon {
+	font-size: 48px;
+}
+
+#currentTemp {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#details {
+	font-size: 12px;
+}
+
+#container {
+	border: 1px solid gray;
+	border-radius: 20px;
+	margin-top: 15px;
+	padding: 20px;
+}
+
+.forecastIcon {
+	font-size: 36px;
+}
+
+.col,
+.col-2,
+.col-6 {
+	/* border: 1px solid green; */
+}
+
+.row {
+	/* border: 1px solid blue; */
+}
+
+.container {
+	/* border: 1px solid red; */
+}
