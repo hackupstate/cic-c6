@@ -1,3 +1,4 @@
+// #41 Show this component for each of the posts from local storage
 const PostPreview = () => {
 	return (
 		<div className="col-4">
