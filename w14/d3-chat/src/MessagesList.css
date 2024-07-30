@@ -1,0 +1,21 @@
+#messagesList {
+	margin-top: 15px;
+	height: calc(100vh - 130px);
+
+	.row {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.messageText {
+		background-color: lightgray;
+		color: black;
+		padding: 7px;
+		border-radius: 30px;
+	}
+
+	.outgoingMessage {
+		background-color: blue;
+		color: white;
+	}
+}
