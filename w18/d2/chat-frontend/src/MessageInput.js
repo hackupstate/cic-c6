@@ -6,16 +6,26 @@ const MessageInput = ({ updateMessages, existingMessages }) => {
 
 	// #15B User has triggered the form submit event
 	const sendMessage = async (event) => {
+		// F24 The user sends a message from the frontend
 		event.preventDefault();
 
+		// F25 Make a request using fetch to the backend endpoint /message
 		const response = await fetch(`http://localhost:3001/message`, {
+			// F26 Make the type POST
 			method: "POST",
+			// F27 Specify the data body type as JSON so express knows to parse
+			//it
 			headers: {
 				"Content-Type": "application/json",
 			},
+			// F28 stringify the data we're sending so it is actually JSON
 			body: JSON.stringify({
+				// F29 Send the inputted message that's connected to the <input> via
+				// state
 				text: inputtedMessage,
+				// also send the outgoing set to true
 				outgoing: true,
+				// include the current time
 				timestamp: new Date(),
 			}),
 		});
