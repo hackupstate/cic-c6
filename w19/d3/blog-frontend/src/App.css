@@ -1,0 +1,28 @@
+h1 {
+	margin-top: 20px;
+}
+
+.card-title {
+	margin-bottom: 0;
+}
+
+.author {
+	font-size: 14px;
+}
+
+.timestamp {
+	font-size: 12px;
+	color: gray;
+	margin-bottom: 10px;
+}
+
+.topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+.topbar h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
