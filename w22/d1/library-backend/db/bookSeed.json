@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Clean Code",
+		"author": "Robert C. Martin"
+	},
+	{
+		"title": "The Pragmatic Programmer",
+		"author": "Andrew Hunt, David Thomas"
+	},
+	{
+		"title": "Introduction to Algorithms",
+		"author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein"
+	},
+	{
+		"title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+		"author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides"
+	},
+	{
+		"title": "You Don't Know JS: Scope & Closures",
+		"author": "Kyle Simpson"
+	},
+	{
+		"title": "Cracking the Coding Interview",
+		"author": "Gayle Laakmann McDowell"
+	},
+	{
+		"title": "Refactoring: Improving the Design of Existing Code",
+		"author": "Martin Fowler"
+	},
+	{
+		"title": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
+		"author": "Gene Kim, Kevin Behr, George Spafford"
+	},
+	{
+		"title": "The Mythical Man-Month: Essays on Software Engineering",
+		"author": "Frederick P. Brooks Jr."
+	},
+	{
+		"title": "Code Complete: A Practical Handbook of Software Construction",
+		"author": "Steve McConnell"
+	}
+]
